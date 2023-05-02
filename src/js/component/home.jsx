@@ -1,24 +1,44 @@
-import React from "react";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+import React from "react";
+import { Jumbotron } from "./jumbotron.jsx";
+import { Card } from "./card.jsx";
+import { Navbar } from "./navbar.jsx";
 
 //create your first component
-const Home = () => {
+export const Home = () => {
 	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+		<div>
+			<Navbar />
+			<div className="container">
+				<Jumbotron />
+				<div className="row">
+					<div className="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+						<Card />
+					</div>
+					<div className="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+						<Card />
+					</div>
+					<div className="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+						<Card />
+					</div>
+					<div className="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+						<Card />
+					</div>
+				</div>
+			</div>
+			<br />
+			<br />
+			<br />
+			<br />
+			<table className="bg-dark text-white text-center w-100 footerPage">
+				<tbody>
+					<tr>
+						<td className="align-middle">
+							Copyright &#169; Your Website 2023
+						</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 	);
 };
