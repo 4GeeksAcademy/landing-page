@@ -12,12 +12,11 @@ import '../styles/index.css'
 import Navbar from './components/navbar';
 import Jumbotron from './components/jumbotron';
 import Card from './components/card';
+import Home from './components/Home';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Navbar />
-    <Jumbotron />
-    <Card />
+    <Home />
     
   </React.StrictMode>,
 )
